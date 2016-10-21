@@ -44,6 +44,7 @@ class NotesViewController: UIViewController {
         }
         let selectedIndexPath = notesTableView.indexPathForSelectedRow!
         notesViewController.note = notes[selectedIndexPath.row]
+        notesViewController.delegate = self
     }
 
 }
@@ -75,3 +76,18 @@ extension NotesViewController: UITableViewDataSource {
     
 }
 
+extension NotesViewController: NoteEditorDelegate {
+    
+    func didEditNote(newNote: Note) {
+        let iteratingNotes = notes
+        
+        for (index, note) in iteratingNotes.enumerated() {
+            if note.date == newNote.date {
+                notes[index] = newNote
+                notesTableView.reloadData()
+                return
+            }
+        }
+    }
+    
+}
