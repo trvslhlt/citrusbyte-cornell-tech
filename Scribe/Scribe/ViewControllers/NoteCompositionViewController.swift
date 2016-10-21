@@ -24,6 +24,7 @@ class NoteCompositionViewController: UIViewController {
     var patient: String?
     let time = Date()
     weak var delegate: NoteComposerDelegate?
+    var recordingInProgress = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +36,17 @@ class NoteCompositionViewController: UIViewController {
         timeIndication.text = dateFormatter.string(from: time)
         translationPreview.text = ""
         configureForRecord()
+        
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(NoteCompositionViewController.backTapped))
+        self.navigationItem.leftBarButtonItem = newBackButton;
     }
     
     
     @IBAction func recordControlChangeRequested(_ sender: AnyObject) {
         if isConfiguredForRecord() {
             if SpeechToTextTranslator.sharedInstance.isAuthorized {
+                recordingInProgress = true
                 SpeechToTextTranslator.sharedInstance.startRecording(updatedTranscription: { transcription in
                     self.translationPreview.text = transcription
                 })
@@ -51,6 +57,7 @@ class NoteCompositionViewController: UIViewController {
                 })
             }
         } else {
+            recordingInProgress = false
             SpeechToTextTranslator.sharedInstance.stopRecording()
             configureForRecord()
         }
@@ -70,7 +77,26 @@ class NoteCompositionViewController: UIViewController {
         recordingControl.alpha = 0.8
     }
     
+    func backTapped() {
+        if recordingInProgress {
+            let alert = UIAlertController(title: "Recording in Progress", message: "Please stop the recording before exiting", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+            return
+        } else {
+            submitNote()
+        }
+    }
+    
     @IBAction func submitRequested(_ sender: AnyObject) {
+        if recordingInProgress {
+            return
+        }
+        submitNote()
+    }
+
+    func submitNote() {
         guard let transcription = translationPreview.text else {
             return
         }
@@ -83,6 +109,9 @@ class NoteCompositionViewController: UIViewController {
     }
     
     @IBAction func dismissRequested(_ sender: AnyObject) {
+        if recordingInProgress {
+            return
+        }
         dismiss(animated: true, completion: nil)
     }
 

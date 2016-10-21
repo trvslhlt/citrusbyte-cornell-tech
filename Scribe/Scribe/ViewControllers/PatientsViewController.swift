@@ -10,7 +10,7 @@ import UIKit
 
 class PatientsViewController: UIViewController {
 
-    let patients = ["Alice Walker", "Daniel Cooper", "Nathaniel Foster", "Marisa Taylor", "Holden Smith"]
+    let patients = ["Alice Derrida", "Daniel Cooper", "Nathaniel Foster", "Marisa Wittgenstein", "Holden Smith"]
     
     @IBOutlet weak var patientsTable: UITableView!
     
