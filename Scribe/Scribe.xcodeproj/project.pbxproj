@@ -17,6 +17,7 @@
 		889938C11DB9D73C0046D8D4 /* PatientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889938BD1DB9D73C0046D8D4 /* PatientsViewController.swift */; };
 		889938C41DB9D7860046D8D4 /* SpeechToTextTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889938C31DB9D7860046D8D4 /* SpeechToTextTranslator.swift */; };
 		889938C81DBA5C610046D8D4 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889938C71DBA5C610046D8D4 /* Note.swift */; };
+		889938CA1DBA7D610046D8D4 /* NoteRequirementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889938C91DBA7D610046D8D4 /* NoteRequirementViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		889938BD1DB9D73C0046D8D4 /* PatientsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PatientsViewController.swift; path = ViewControllers/PatientsViewController.swift; sourceTree = "<group>"; };
 		889938C31DB9D7860046D8D4 /* SpeechToTextTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechToTextTranslator.swift; sourceTree = "<group>"; };
 		889938C71DBA5C610046D8D4 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		889938C91DBA7D610046D8D4 /* NoteRequirementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteRequirementViewController.swift; path = ViewControllers/NoteRequirementViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				889938BB1DB9D73C0046D8D4 /* NotesViewController.swift */,
 				889938BC1DB9D73C0046D8D4 /* NoteViewController.swift */,
 				889938BD1DB9D73C0046D8D4 /* PatientsViewController.swift */,
+				889938C91DBA7D610046D8D4 /* NoteRequirementViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				889938C11DB9D73C0046D8D4 /* PatientsViewController.swift in Sources */,
 				889938C81DBA5C610046D8D4 /* Note.swift in Sources */,
 				889938A21DB9AAB10046D8D4 /* AppDelegate.swift in Sources */,
+				889938CA1DBA7D610046D8D4 /* NoteRequirementViewController.swift in Sources */,
 				889938BE1DB9D73C0046D8D4 /* NoteCompositionViewController.swift in Sources */,
 				889938BF1DB9D73C0046D8D4 /* NotesViewController.swift in Sources */,
 				889938C41DB9D7860046D8D4 /* SpeechToTextTranslator.swift in Sources */,

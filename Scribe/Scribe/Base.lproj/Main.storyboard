@@ -202,6 +202,49 @@
             </objects>
             <point key="canvasLocation" x="1909.5999999999999" y="866.71664167916049"/>
         </scene>
+        <!--Note Requirement View Controller-->
+        <scene sceneID="ffB-Rg-v64">
+            <objects>
+                <viewController storyboardIdentifier="NoteRequirementViewController" id="4vf-eR-ju4" customClass="NoteRequirementViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0qN-bJ-SFS"/>
+                        <viewControllerLayoutGuide type="bottom" id="EwI-Or-MWt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="imb-Mh-Wab">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9v7-r9-bMr">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gV8-y2-YNS">
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissTapped:" destination="4vf-eR-ju4" eventType="touchUpInside" id="GbF-Ov-UPP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gV8-y2-YNS" firstAttribute="centerX" secondItem="imb-Mh-Wab" secondAttribute="centerX" id="0AB-No-zkh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9v7-r9-bMr" secondAttribute="trailing" id="3O2-au-wnv"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="9v7-r9-bMr" secondAttribute="leading" id="7wx-Cv-ODp"/>
+                            <constraint firstItem="gV8-y2-YNS" firstAttribute="top" secondItem="9v7-r9-bMr" secondAttribute="bottom" constant="8" id="88N-ua-h80"/>
+                            <constraint firstItem="EwI-Or-MWt" firstAttribute="top" secondItem="gV8-y2-YNS" secondAttribute="bottom" constant="8" id="aOf-In-FCV"/>
+                            <constraint firstItem="9v7-r9-bMr" firstAttribute="top" secondItem="0qN-bJ-SFS" secondAttribute="bottom" constant="8" id="o5D-vY-DC5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="9v7-r9-bMr" id="c6d-QK-EWb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bzV-wB-Uqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725.5999999999999" y="866.71664167916049"/>
+        </scene>
         <!--Note View Controller-->
         <scene sceneID="Rmk-N1-627">
             <objects>

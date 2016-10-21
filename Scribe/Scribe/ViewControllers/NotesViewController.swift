@@ -66,6 +66,13 @@ class NotesViewController: UIViewController {
         }
         progressContainer.addSubview(progressLabel)
         progressLabel.frame = CGRect(origin: lastOrigin, size: viewSize)
+        
+        progressContainer.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(NotesViewController.showNoteRequirements)))
+    }
+    
+    func showNoteRequirements() {
+        let noteRequirementViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoteRequirementViewController") as! NoteRequirementViewController
+        present(noteRequirementViewController, animated: true, completion: nil)
     }
     
     func updateProgressbar() {
