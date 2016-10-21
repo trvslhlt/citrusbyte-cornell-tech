@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -205,34 +206,39 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DLb-g2-E7w">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNG-tH-XKx">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="LbI-RW-d2E"/>
-                                    <constraint firstAttribute="height" constant="60" id="bvG-HN-hKx"/>
-                                </constraints>
-                                <state key="normal" title="Play"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gn1-jY-YYq">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lo0-p7-jra">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lo0-p7-jra" secondAttribute="height" multiplier="1:1" id="Ybe-ZQ-L8a"/>
+                                    <constraint firstAttribute="width" constant="70" id="msA-ni-Ug5"/>
+                                </constraints>
+                                <state key="normal" image="Play"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Waveform" translatesAutoresizingMaskIntoConstraints="NO" id="Wrp-ed-uEe"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Wrp-ed-uEe" firstAttribute="leading" secondItem="lo0-p7-jra" secondAttribute="trailing" constant="8" id="2aX-Q5-GJw"/>
+                            <constraint firstItem="Wrp-ed-uEe" firstAttribute="height" secondItem="lo0-p7-jra" secondAttribute="height" id="2pX-pO-e6P"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DLb-g2-E7w" secondAttribute="trailing" id="JRh-ml-USf"/>
+                            <constraint firstItem="2C9-Mj-gIH" firstAttribute="top" secondItem="lo0-p7-jra" secondAttribute="bottom" constant="20" id="Mrv-7Q-Pdq"/>
                             <constraint firstAttribute="leadingMargin" secondItem="DLb-g2-E7w" secondAttribute="leading" id="My8-Vr-sbM"/>
                             <constraint firstItem="DLb-g2-E7w" firstAttribute="top" secondItem="Gn1-jY-YYq" secondAttribute="bottom" constant="8" id="NeL-TT-bNR"/>
-                            <constraint firstItem="VNG-tH-XKx" firstAttribute="centerX" secondItem="aUS-8m-ZLW" secondAttribute="centerX" id="YIF-gL-mi7"/>
-                            <constraint firstItem="VNG-tH-XKx" firstAttribute="top" secondItem="DLb-g2-E7w" secondAttribute="bottom" constant="20" id="c3u-pV-XV9"/>
+                            <constraint firstItem="Wrp-ed-uEe" firstAttribute="bottom" secondItem="lo0-p7-jra" secondAttribute="bottom" id="VBE-VK-Pug"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="lo0-p7-jra" secondAttribute="leading" id="Vc7-kh-USu"/>
                             <constraint firstItem="Gn1-jY-YYq" firstAttribute="top" secondItem="eQO-A7-MNc" secondAttribute="bottom" constant="8" id="hVX-4C-QBg"/>
+                            <constraint firstItem="lo0-p7-jra" firstAttribute="top" secondItem="DLb-g2-E7w" secondAttribute="bottom" constant="8" id="kNF-5J-4oh"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Gn1-jY-YYq" secondAttribute="leading" id="rGJ-F4-0FV"/>
-                            <constraint firstItem="2C9-Mj-gIH" firstAttribute="top" secondItem="VNG-tH-XKx" secondAttribute="bottom" constant="20" id="rhV-Fb-j9Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Gn1-jY-YYq" secondAttribute="trailing" id="y1t-hU-Lad"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wrp-ed-uEe" secondAttribute="trailing" id="yry-H4-VRP"/>
                         </constraints>
                     </view>
                     <connections>
@@ -263,4 +269,8 @@
             <point key="canvasLocation" x="226" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Play" width="313" height="313"/>
+        <image name="Waveform" width="250" height="100"/>
+    </resources>
 </document>
