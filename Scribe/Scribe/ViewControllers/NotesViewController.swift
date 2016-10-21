@@ -13,7 +13,7 @@ class NotesViewController: UIViewController {
     @IBOutlet weak var notesTableView: UITableView!
     @IBOutlet weak var progressContainer: UIView!
     var progressViews = [UIView]()
-    
+    let progressLabel = UILabel()
     var patient: String!
     var notes = [Note]()
     
@@ -23,7 +23,6 @@ class NotesViewController: UIViewController {
             Note(patient: patient, date: Date(), transcription: "Alice id doing fine. The pain meds are still doing their work"),
             Note(patient: patient, date: Date(), transcription: "Received 100ml of dilaudid")
         ]
-        
         setupProgressViews()
     }
 
@@ -55,27 +54,34 @@ class NotesViewController: UIViewController {
         let incrementWidth = UIScreen.main.bounds.width / CGFloat(numberOfViews)
         let viewHeight: CGFloat = 50
         let viewSize = CGSize(width: incrementWidth, height: viewHeight)
+        var lastOrigin: CGPoint!
         for i in 0..<numberOfViews {
             let origin = CGPoint(x: CGFloat(i) * incrementWidth, y: 0)
+            lastOrigin = origin
             let view = UIView(frame: CGRect(origin: origin, size: viewSize))
             view.tag = i
             progressContainer.addSubview(view)
             view.backgroundColor = UIColor.green
             progressViews.append(view)
         }
+        progressContainer.addSubview(progressLabel)
+        progressLabel.frame = CGRect(origin: lastOrigin, size: viewSize)
     }
     
     func updateProgressbar() {
-        let portion = CGFloat(notes.count) / 7
+        let goalNumberOfNotes = 7
+        let currentNumberOfNotes = notes.count
+        let portion = CGFloat(notes.count) / CGFloat(goalNumberOfNotes)
         let mixedColor = blendColor(color1: UIColor.green, withColor: UIColor.red, portion: portion)
         for view in progressViews {
             view.backgroundColor = mixedColor
-            if view.tag < notes.count {
+            if view.tag < currentNumberOfNotes {
                 view.isHidden = false
             } else {
                 view.isHidden = true
             }
         }
+        progressLabel.text = "\(currentNumberOfNotes)/\(goalNumberOfNotes)"
     }
     
     func blendColor(color1: UIColor, withColor color2: UIColor, portion: CGFloat) -> UIColor {
