@@ -19,9 +19,12 @@ class NotesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var initialDate = Date()
+        initialDate = initialDate.addingTimeInterval(-500)
         notes = [
-            Note(patient: patient, date: Date(), transcription: "Alice id doing fine. The pain meds are still doing their work"),
-            Note(patient: patient, date: Date(), transcription: "Received 100ml of dilaudid")
+            Note(patient: patient, date: initialDate.addingTimeInterval(300), transcription: "20ml of morphine. She's in good shape."),
+            Note(patient: patient, date: initialDate.addingTimeInterval(200), transcription: "X-rays came back negative for fractures"),
+            Note(patient: patient, date: initialDate, transcription: "Ordered X-rays")
         ]
         setupProgressViews()
     }
