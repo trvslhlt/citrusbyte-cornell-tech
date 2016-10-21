@@ -92,17 +92,27 @@
                                     <outlet property="delegate" destination="Gn3-hK-sil" id="Nvi-L2-36p"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dv6-c3-PtA">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="x2v-xa-2Sb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dv6-c3-PtA" firstAttribute="leading" secondItem="QyM-iP-4Mz" secondAttribute="leadingMargin" constant="-16" id="D6Y-is-Fq8"/>
                             <constraint firstItem="guY-91-xn6" firstAttribute="leading" secondItem="QyM-iP-4Mz" secondAttribute="leadingMargin" constant="-16" id="PT0-W6-HQs"/>
-                            <constraint firstItem="zaD-cZ-vSG" firstAttribute="top" secondItem="guY-91-xn6" secondAttribute="bottom" id="SIl-zB-xa6"/>
+                            <constraint firstItem="zaD-cZ-vSG" firstAttribute="top" secondItem="dv6-c3-PtA" secondAttribute="bottom" id="SPN-ch-VXv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="guY-91-xn6" secondAttribute="trailing" constant="-16" id="Uyn-bt-M3D"/>
+                            <constraint firstItem="dv6-c3-PtA" firstAttribute="top" secondItem="guY-91-xn6" secondAttribute="bottom" constant="8" id="Y53-1g-T2O"/>
                             <constraint firstItem="guY-91-xn6" firstAttribute="top" secondItem="uey-KG-DrD" secondAttribute="bottom" constant="-64" id="roD-U0-olt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dv6-c3-PtA" secondAttribute="trailing" constant="-16" id="wQw-6F-PS7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="notesTableView" destination="guY-91-xn6" id="mnE-eQ-dsP"/>
+                        <outlet property="progressContainer" destination="dv6-c3-PtA" id="7zG-7O-S1U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVx-k0-OLy" userLabel="First Responder" sceneMemberID="firstResponder"/>

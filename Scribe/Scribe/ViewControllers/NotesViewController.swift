@@ -12,6 +12,7 @@ class NotesViewController: UIViewController {
 
     @IBOutlet weak var recordControl: UIButton!
     @IBOutlet weak var notesTableView: UITableView!
+    @IBOutlet weak var progressContainer: UIView!
     
     var patient: String!
     var notes = [Note]()
@@ -22,6 +23,8 @@ class NotesViewController: UIViewController {
             Note(patient: patient, date: Date(), transcription: "Alice id doing fine. The pain meds are still doing their work"),
             Note(patient: patient, date: Date(), transcription: "Received 100ml of dilaudid")
         ]
+        
+        setupProgressViews()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +48,10 @@ class NotesViewController: UIViewController {
         let selectedIndexPath = notesTableView.indexPathForSelectedRow!
         notesViewController.note = notes[selectedIndexPath.row]
         notesViewController.delegate = self
+    }
+    
+    func setupProgressViews() {
+        print("not done!")
     }
 
 }
