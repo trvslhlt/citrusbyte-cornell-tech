@@ -100,6 +100,9 @@
                             <constraint firstItem="guY-91-xn6" firstAttribute="top" secondItem="uey-KG-DrD" secondAttribute="bottom" constant="-64" id="roD-U0-olt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="notesTableView" destination="guY-91-xn6" id="mnE-eQ-dsP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVx-k0-OLy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

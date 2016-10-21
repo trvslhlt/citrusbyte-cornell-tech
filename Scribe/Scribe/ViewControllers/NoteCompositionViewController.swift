@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol NoteComposerDelegate: class {
+    func didComposeNewNote(note: Note)
+}
+
 
 class NoteCompositionViewController: UIViewController {
 
@@ -18,6 +22,7 @@ class NoteCompositionViewController: UIViewController {
     @IBOutlet weak var submitControl: UIButton!
     
     let time = Date()
+    weak var delegate: NoteComposerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +70,12 @@ class NoteCompositionViewController: UIViewController {
     }
     
     @IBAction func submitRequested(_ sender: AnyObject) {
-        
+        guard let transcription = translationPreview.text else {
+            return
+        }
+        let note = Note(date: self.time, transcription: transcription)
+        delegate?.didComposeNewNote(note: note)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func dismissRequested(_ sender: AnyObject) {
