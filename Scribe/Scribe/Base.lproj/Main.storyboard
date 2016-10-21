@@ -194,7 +194,7 @@
         <!--Note View Controller-->
         <scene sceneID="Rmk-N1-627">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="kYf-he-Bes" customClass="NoteViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteViewController" automaticallyAdjustsScrollViewInsets="NO" id="kYf-he-Bes" customClass="NoteViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eQO-A7-MNc"/>
                         <viewControllerLayoutGuide type="bottom" id="2C9-Mj-gIH"/>
@@ -216,21 +216,33 @@
                                 </constraints>
                                 <state key="normal" title="Play"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gn1-jY-YYq">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="DLb-g2-E7w" secondAttribute="trailing" id="JRh-ml-USf"/>
                             <constraint firstAttribute="leadingMargin" secondItem="DLb-g2-E7w" secondAttribute="leading" id="My8-Vr-sbM"/>
+                            <constraint firstItem="DLb-g2-E7w" firstAttribute="top" secondItem="Gn1-jY-YYq" secondAttribute="bottom" constant="8" id="NeL-TT-bNR"/>
                             <constraint firstItem="VNG-tH-XKx" firstAttribute="centerX" secondItem="aUS-8m-ZLW" secondAttribute="centerX" id="YIF-gL-mi7"/>
-                            <constraint firstItem="DLb-g2-E7w" firstAttribute="top" secondItem="eQO-A7-MNc" secondAttribute="bottom" constant="8" id="Ysn-xi-uze"/>
                             <constraint firstItem="VNG-tH-XKx" firstAttribute="top" secondItem="DLb-g2-E7w" secondAttribute="bottom" constant="20" id="c3u-pV-XV9"/>
+                            <constraint firstItem="Gn1-jY-YYq" firstAttribute="top" secondItem="eQO-A7-MNc" secondAttribute="bottom" constant="8" id="hVX-4C-QBg"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Gn1-jY-YYq" secondAttribute="leading" id="rGJ-F4-0FV"/>
                             <constraint firstItem="2C9-Mj-gIH" firstAttribute="top" secondItem="VNG-tH-XKx" secondAttribute="bottom" constant="20" id="rhV-Fb-j9Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gn1-jY-YYq" secondAttribute="trailing" id="y1t-hU-Lad"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="Gn1-jY-YYq" id="cTI-UE-iQQ"/>
+                        <outlet property="transcriptionEditor" destination="DLb-g2-E7w" id="LXh-b0-fPO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poF-yC-9GF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2727" y="139"/>
+            <point key="canvasLocation" x="2725.5999999999999" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8WX-Yb-bxs">

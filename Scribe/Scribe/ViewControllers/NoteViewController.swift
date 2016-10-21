@@ -9,9 +9,22 @@
 import UIKit
 
 class NoteViewController: UIViewController {
-
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var transcriptionEditor: UITextView!
+    var note: Note?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let note = note {
+            transcriptionEditor.text = note.transcription
+            timeLabel.text = note.longTimeFormat()
+        }
+        
+    }
+    
 }

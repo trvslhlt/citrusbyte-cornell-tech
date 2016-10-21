@@ -35,6 +35,14 @@ class NotesViewController: UIViewController {
         noteCompositionViewController.delegate = self
         present(noteCompositionViewController, animated: true, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let notesViewController = segue.destination as? NoteViewController else {
+            return
+        }
+        let selectedIndexPath = notesTableView.indexPathForSelectedRow!
+        notesViewController.note = notes[selectedIndexPath.row]
+    }
 
 }
 
