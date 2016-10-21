@@ -40,13 +40,26 @@ class NoteViewController: UIViewController {
             let _ = navigationController?.popViewController(animated: true)
             return
         }
-        
-        delegate?.didEditNote(newNote: newNote)
-        let _ = navigationController?.popViewController(animated: true)
+        askToSaveChanges(newNote: newNote)
     }
     
     func createNewNote() {
         newNote = Note(patient: note!.patient, date: note!.date, transcription: transcriptionEditor.text)
+    }
+    
+    func askToSaveChanges(newNote: Note) {
+        let alert = UIAlertController(title: "Save?", message: "What would you like to do with your changes?", preferredStyle: .alert)
+        let discardAction = UIAlertAction(title: "Discard", style: .destructive) { _ in
+            let _ = self.navigationController?.popViewController(animated: true)
+        }
+        let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+            self.delegate?.didEditNote(newNote: newNote)
+            let _ = self.navigationController?.popViewController(animated: true)
+        }
+        
+        alert.addAction(discardAction)
+        alert.addAction(saveAction)
+        present(alert, animated: true, completion: nil)
     }
     
 }
