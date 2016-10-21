@@ -93,9 +93,9 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dv6-c3-PtA">
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="x2v-xa-2Sb"/>
+                                    <constraint firstAttribute="height" constant="50" id="x2v-xa-2Sb"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -148,7 +148,7 @@
                                     <action selector="dismissRequested:" destination="2ZD-FU-T2I" eventType="touchUpInside" id="a30-bS-jpW"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&lt;live translation text&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nkp-cd-PL6">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="&lt;live translation text&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nkp-cd-PL6">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
