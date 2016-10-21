@@ -32,6 +32,7 @@ class NoteViewController: UIViewController {
         if let note = note {
             transcriptionEditor.text = note.transcription
             timeLabel.text = note.longTimeFormat()
+            title = note.patient
         }
     }
     
