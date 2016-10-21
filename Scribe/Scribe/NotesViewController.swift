@@ -25,11 +25,14 @@ class NotesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         title = patient
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(NotesViewController.requestedNewNote))
     }
     
     
-    @IBAction func didRequestRecord(_ sender: AnyObject) {
-        
+    func requestedNewNote() {
+        let noteCompositionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoteCompositionViewController")
+        present(noteCompositionViewController, animated: true, completion: nil)
     }
 
 }

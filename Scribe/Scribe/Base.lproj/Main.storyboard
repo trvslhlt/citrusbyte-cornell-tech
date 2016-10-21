@@ -91,39 +91,24 @@
                                     <outlet property="delegate" destination="Gn3-hK-sil" id="Nvi-L2-36p"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPm-tX-CwP">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="VPb-ag-xYL"/>
-                                    <constraint firstAttribute="height" constant="50" id="bWo-Al-K62"/>
-                                </constraints>
-                                <state key="normal" title="record"/>
-                                <connections>
-                                    <action selector="didRequestRecord:" destination="Gn3-hK-sil" eventType="touchUpInside" id="x6Q-Np-UYo"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PPm-tX-CwP" firstAttribute="centerX" secondItem="QyM-iP-4Mz" secondAttribute="centerX" id="An2-5g-aWA"/>
-                            <constraint firstItem="zaD-cZ-vSG" firstAttribute="top" secondItem="PPm-tX-CwP" secondAttribute="bottom" constant="20" id="G8h-U7-cf7"/>
                             <constraint firstItem="guY-91-xn6" firstAttribute="leading" secondItem="QyM-iP-4Mz" secondAttribute="leadingMargin" constant="-16" id="PT0-W6-HQs"/>
+                            <constraint firstItem="zaD-cZ-vSG" firstAttribute="top" secondItem="guY-91-xn6" secondAttribute="bottom" id="SIl-zB-xa6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="guY-91-xn6" secondAttribute="trailing" constant="-16" id="Uyn-bt-M3D"/>
-                            <constraint firstItem="PPm-tX-CwP" firstAttribute="top" secondItem="guY-91-xn6" secondAttribute="bottom" constant="20" id="g7x-Rg-7BU"/>
                             <constraint firstItem="guY-91-xn6" firstAttribute="top" secondItem="uey-KG-DrD" secondAttribute="bottom" constant="-64" id="roD-U0-olt"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="recordControl" destination="PPm-tX-CwP" id="6VS-5h-KMm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVx-k0-OLy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1910" y="139"/>
+            <point key="canvasLocation" x="1909.5999999999999" y="138.98050974512745"/>
         </scene>
         <!--Note Composition View Controller-->
         <scene sceneID="rNB-TV-2dG">
             <objects>
-                <viewController id="2ZD-FU-T2I" customClass="NoteCompositionViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteCompositionViewController" id="2ZD-FU-T2I" customClass="NoteCompositionViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Tr-Mv-LMC"/>
                         <viewControllerLayoutGuide type="bottom" id="NBz-n2-abz"/>
@@ -132,18 +117,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtA-Fz-SXS">
-                                <frame key="frameInset" minX="17" minY="629" width="45" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uP-TL-tTx">
+                                <color key="backgroundColor" red="0.78561367083774236" green="1" blue="0.80982896686155625" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="submit"/>
+                                <connections>
+                                    <action selector="submitRequested:" destination="2ZD-FU-T2I" eventType="touchUpInside" id="lTu-Bb-RJw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtA-Fz-SXS">
+                                <color key="backgroundColor" red="1" green="0.83695917749389293" blue="0.86376799880534194" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="N6F-zy-bqS"/>
+                                </constraints>
                                 <state key="normal" title="cancel"/>
+                                <connections>
+                                    <action selector="dismissRequested:" destination="2ZD-FU-T2I" eventType="touchUpInside" id="a30-bS-jpW"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&lt;live translation text&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nkp-cd-PL6">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;time label&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvr-Xf-9AN">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="us0-Ae-VoF">
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="SlW-NJ-0z3"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordControlChangeRequested:" destination="2ZD-FU-T2I" eventType="touchUpInside" id="g5H-ns-156"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gvr-Xf-9AN" firstAttribute="top" secondItem="5Tr-Mv-LMC" secondAttribute="bottom" constant="8" id="17D-oN-hHA"/>
+                            <constraint firstItem="8uP-TL-tTx" firstAttribute="leading" secondItem="vtA-Fz-SXS" secondAttribute="trailing" constant="-1" id="9ue-sq-aAM"/>
+                            <constraint firstItem="NBz-n2-abz" firstAttribute="top" secondItem="vtA-Fz-SXS" secondAttribute="bottom" id="D6c-M9-4mH"/>
+                            <constraint firstItem="vtA-Fz-SXS" firstAttribute="top" secondItem="us0-Ae-VoF" secondAttribute="bottom" constant="7" id="DUX-TM-bP3"/>
+                            <constraint firstItem="NBz-n2-abz" firstAttribute="top" secondItem="8uP-TL-tTx" secondAttribute="bottom" constant="-1" id="EQj-fo-cIm"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Gvr-Xf-9AN" secondAttribute="leading" id="GhD-e3-jx9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="us0-Ae-VoF" secondAttribute="trailing" constant="-16" id="Pff-IG-myC"/>
+                            <constraint firstItem="us0-Ae-VoF" firstAttribute="top" secondItem="nkp-cd-PL6" secondAttribute="bottom" constant="8" id="Z3a-rc-bAb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="nkp-cd-PL6" secondAttribute="leading" id="bHb-eP-NKF"/>
+                            <constraint firstItem="8uP-TL-tTx" firstAttribute="width" secondItem="vtA-Fz-SXS" secondAttribute="width" id="dfv-c3-8ny"/>
+                            <constraint firstItem="nkp-cd-PL6" firstAttribute="top" secondItem="Gvr-Xf-9AN" secondAttribute="bottom" constant="8" id="ka6-tU-7Hi"/>
+                            <constraint firstItem="vtA-Fz-SXS" firstAttribute="leading" secondItem="JYf-CD-Ekg" secondAttribute="leadingMargin" constant="-16" id="q8s-pX-w1P"/>
+                            <constraint firstItem="8uP-TL-tTx" firstAttribute="height" secondItem="vtA-Fz-SXS" secondAttribute="height" id="tno-5P-EsY"/>
+                            <constraint firstItem="us0-Ae-VoF" firstAttribute="leading" secondItem="JYf-CD-Ekg" secondAttribute="leadingMargin" constant="-16" id="vkz-P1-LlG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nkp-cd-PL6" secondAttribute="trailing" id="wra-6T-jF0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8uP-TL-tTx" secondAttribute="trailing" constant="-16" id="zgP-ND-oBW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelControl" destination="vtA-Fz-SXS" id="W18-Rd-BN3"/>
+                        <outlet property="recordingControl" destination="us0-Ae-VoF" id="MmV-P8-qec"/>
+                        <outlet property="submitControl" destination="8uP-TL-tTx" id="y6w-bq-hd5"/>
+                        <outlet property="timeIndication" destination="Gvr-Xf-9AN" id="MMn-F8-lwh"/>
+                        <outlet property="translationPreview" destination="nkp-cd-PL6" id="Gr6-G9-CpF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mfw-Y4-pmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1910" y="867"/>
+            <point key="canvasLocation" x="1909.5999999999999" y="866.71664167916049"/>
         </scene>
         <!--Note View Controller-->
         <scene sceneID="Rmk-N1-627">
