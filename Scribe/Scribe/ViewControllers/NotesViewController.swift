@@ -22,9 +22,9 @@ class NotesViewController: UIViewController {
         var initialDate = Date()
         initialDate = initialDate.addingTimeInterval(-500)
         notes = [
-            Note(patient: patient, date: initialDate.addingTimeInterval(300), transcription: "20ml of morphine. She's in good shape."),
-            Note(patient: patient, date: initialDate.addingTimeInterval(200), transcription: "X-rays came back negative for fractures"),
-            Note(patient: patient, date: initialDate, transcription: "Ordered X-rays")
+            Note(patient: patient, date: initialDate.addingTimeInterval(300), transcription: "20mg of morphine. Check back in to see how the meds are taking."),
+            Note(patient: patient, date: initialDate.addingTimeInterval(200), transcription: "X-rays came back negative for fractures. C1 & C2 are all good."),
+            Note(patient: patient, date: initialDate, transcription: "Ordered X-rays on the cervical vertibrae")
         ]
         setupProgressViews()
     }
