@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class NoteCompositionViewController: UIViewController {
 
     @IBOutlet weak var timeIndication: UILabel!
@@ -27,16 +28,44 @@ class NoteCompositionViewController: UIViewController {
         dateFormatter.timeStyle = .long
         timeIndication.text = dateFormatter.string(from: time)
         translationPreview.text = ""
+        configureForRecord()
     }
     
     
     @IBAction func recordControlChangeRequested(_ sender: AnyObject) {
-        print("record")
+        if isConfiguredForRecord() {
+            if SpeechToTextTranslator.sharedInstance.isAuthorized {
+                SpeechToTextTranslator.sharedInstance.startRecording(updatedTranscription: { transcription in
+                    self.translationPreview.text = transcription
+                })
+                configureForStop()
+            } else {
+                SpeechToTextTranslator.sharedInstance.requestAuthorization(completion: { success in
+                    print("Authorized? \(success)")
+                })
+            }
+        } else {
+            SpeechToTextTranslator.sharedInstance.stopRecording()
+            configureForRecord()
+        }
     }
     
+    func isConfiguredForRecord() -> Bool {
+        return recordingControl.titleLabel?.text ?? "" == "Record"
+    }
+    
+    func configureForStop() {
+        recordingControl.setTitle("Stop", for: .normal)
+        recordingControl.alpha = 1
+    }
+
+    func configureForRecord() {
+        recordingControl.setTitle("Record", for: .normal)
+        recordingControl.alpha = 0.8
+    }
     
     @IBAction func submitRequested(_ sender: AnyObject) {
-        print("submit")
+        
     }
     
     @IBAction func dismissRequested(_ sender: AnyObject) {

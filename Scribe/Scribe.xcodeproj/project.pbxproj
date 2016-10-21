@@ -8,26 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		889938A21DB9AAB10046D8D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889938A11DB9AAB10046D8D4 /* AppDelegate.swift */; };
-		889938A41DB9AAB10046D8D4 /* PatientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889938A31DB9AAB10046D8D4 /* PatientsViewController.swift */; };
 		889938A71DB9AAB10046D8D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889938A51DB9AAB10046D8D4 /* Main.storyboard */; };
 		889938A91DB9AAB10046D8D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 889938A81DB9AAB10046D8D4 /* Assets.xcassets */; };
 		889938AC1DB9AAB10046D8D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889938AA1DB9AAB10046D8D4 /* LaunchScreen.storyboard */; };
-		889938B41DB9B44E0046D8D4 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889938B31DB9B44E0046D8D4 /* NotesViewController.swift */; };
-		889938B61DB9B4560046D8D4 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889938B51DB9B4560046D8D4 /* NoteViewController.swift */; };
-		889938B81DB9B8CE0046D8D4 /* NoteCompositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889938B71DB9B8CE0046D8D4 /* NoteCompositionViewController.swift */; };
+		889938BE1DB9D73C0046D8D4 /* NoteCompositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889938BA1DB9D73C0046D8D4 /* NoteCompositionViewController.swift */; };
+		889938BF1DB9D73C0046D8D4 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889938BB1DB9D73C0046D8D4 /* NotesViewController.swift */; };
+		889938C01DB9D73C0046D8D4 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889938BC1DB9D73C0046D8D4 /* NoteViewController.swift */; };
+		889938C11DB9D73C0046D8D4 /* PatientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889938BD1DB9D73C0046D8D4 /* PatientsViewController.swift */; };
+		889938C41DB9D7860046D8D4 /* SpeechToTextTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889938C31DB9D7860046D8D4 /* SpeechToTextTranslator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8899389E1DB9AAB10046D8D4 /* Scribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		889938A11DB9AAB10046D8D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		889938A31DB9AAB10046D8D4 /* PatientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsViewController.swift; sourceTree = "<group>"; };
 		889938A61DB9AAB10046D8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		889938A81DB9AAB10046D8D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		889938AB1DB9AAB10046D8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		889938AD1DB9AAB10046D8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		889938B31DB9B44E0046D8D4 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
-		889938B51DB9B4560046D8D4 /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
-		889938B71DB9B8CE0046D8D4 /* NoteCompositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCompositionViewController.swift; sourceTree = "<group>"; };
+		889938BA1DB9D73C0046D8D4 /* NoteCompositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteCompositionViewController.swift; path = ViewControllers/NoteCompositionViewController.swift; sourceTree = "<group>"; };
+		889938BB1DB9D73C0046D8D4 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesViewController.swift; path = ViewControllers/NotesViewController.swift; sourceTree = "<group>"; };
+		889938BC1DB9D73C0046D8D4 /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteViewController.swift; path = ViewControllers/NoteViewController.swift; sourceTree = "<group>"; };
+		889938BD1DB9D73C0046D8D4 /* PatientsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PatientsViewController.swift; path = ViewControllers/PatientsViewController.swift; sourceTree = "<group>"; };
+		889938C31DB9D7860046D8D4 /* SpeechToTextTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechToTextTranslator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,16 +63,33 @@
 			isa = PBXGroup;
 			children = (
 				889938A11DB9AAB10046D8D4 /* AppDelegate.swift */,
-				889938A31DB9AAB10046D8D4 /* PatientsViewController.swift */,
-				889938B31DB9B44E0046D8D4 /* NotesViewController.swift */,
-				889938B71DB9B8CE0046D8D4 /* NoteCompositionViewController.swift */,
-				889938B51DB9B4560046D8D4 /* NoteViewController.swift */,
 				889938A51DB9AAB10046D8D4 /* Main.storyboard */,
+				889938B91DB9D71A0046D8D4 /* ViewControllers */,
+				889938C21DB9D74D0046D8D4 /* ViewModels */,
 				889938A81DB9AAB10046D8D4 /* Assets.xcassets */,
 				889938AA1DB9AAB10046D8D4 /* LaunchScreen.storyboard */,
 				889938AD1DB9AAB10046D8D4 /* Info.plist */,
+				889938C31DB9D7860046D8D4 /* SpeechToTextTranslator.swift */,
 			);
 			path = Scribe;
+			sourceTree = "<group>";
+		};
+		889938B91DB9D71A0046D8D4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				889938BA1DB9D73C0046D8D4 /* NoteCompositionViewController.swift */,
+				889938BB1DB9D73C0046D8D4 /* NotesViewController.swift */,
+				889938BC1DB9D73C0046D8D4 /* NoteViewController.swift */,
+				889938BD1DB9D73C0046D8D4 /* PatientsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		889938C21DB9D74D0046D8D4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,11 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				889938B61DB9B4560046D8D4 /* NoteViewController.swift in Sources */,
-				889938B81DB9B8CE0046D8D4 /* NoteCompositionViewController.swift in Sources */,
-				889938A41DB9AAB10046D8D4 /* PatientsViewController.swift in Sources */,
+				889938C01DB9D73C0046D8D4 /* NoteViewController.swift in Sources */,
+				889938C11DB9D73C0046D8D4 /* PatientsViewController.swift in Sources */,
 				889938A21DB9AAB10046D8D4 /* AppDelegate.swift in Sources */,
-				889938B41DB9B44E0046D8D4 /* NotesViewController.swift in Sources */,
+				889938BE1DB9D73C0046D8D4 /* NoteCompositionViewController.swift in Sources */,
+				889938BF1DB9D73C0046D8D4 /* NotesViewController.swift in Sources */,
+				889938C41DB9D7860046D8D4 /* SpeechToTextTranslator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +332,7 @@
 				889938B21DB9AAB10046D8D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
