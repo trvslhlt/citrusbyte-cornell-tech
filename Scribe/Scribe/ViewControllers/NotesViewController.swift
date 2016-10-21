@@ -14,13 +14,14 @@ class NotesViewController: UIViewController {
     @IBOutlet weak var notesTableView: UITableView!
     
     var patient: String!
-    var notes: [Note] = [
-        Note(date: Date(), transcription: "Alice id doing fine. The pain meds are still doing their work"),
-        Note(date: Date(), transcription: "Received 100ml of dilaudid")
-    ]
+    var notes = [Note]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        notes = [
+            Note(patient: patient, date: Date(), transcription: "Alice id doing fine. The pain meds are still doing their work"),
+            Note(patient: patient, date: Date(), transcription: "Received 100ml of dilaudid")
+        ]
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -33,6 +34,7 @@ class NotesViewController: UIViewController {
     func requestedNewNote() {
         let noteCompositionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoteCompositionViewController") as! NoteCompositionViewController
         noteCompositionViewController.delegate = self
+        noteCompositionViewController.patient = patient
         present(noteCompositionViewController, animated: true, completion: nil)
     }
     

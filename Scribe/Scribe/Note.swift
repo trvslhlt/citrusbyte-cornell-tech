@@ -10,10 +10,12 @@ import Foundation
 
 class Note {
     
+    let patient: String
     let date: Date
     let transcription: String
     
-    init(date: Date, transcription: String) {
+    init(patient: String, date: Date, transcription: String) {
+        self.patient = patient
         self.date = date
         self.transcription = transcription
     }

@@ -21,6 +21,7 @@ class NoteCompositionViewController: UIViewController {
     @IBOutlet weak var cancelControl: UIButton!
     @IBOutlet weak var submitControl: UIButton!
     
+    var patient: String?
     let time = Date()
     weak var delegate: NoteComposerDelegate?
     
@@ -73,7 +74,10 @@ class NoteCompositionViewController: UIViewController {
         guard let transcription = translationPreview.text else {
             return
         }
-        let note = Note(date: self.time, transcription: transcription)
+        guard let patient = patient else {
+            return
+        }
+        let note = Note(patient: patient, date: self.time, transcription: transcription)
         delegate?.didComposeNewNote(note: note)
         dismiss(animated: true, completion: nil)
     }
