@@ -1,0 +1,43 @@
+{
+  "patients": [
+    {
+      "id": "1111",
+      "name": "Marie"
+    },
+    {
+      "id": "2222",
+      "name": "Franz"
+    }
+  ],
+  "actors": [
+    {
+      "id": "aaaa",
+      "name": "Dr. K"
+    },
+    {
+      "id": "bbbb",
+      "name": "Nurse J"
+    },
+    {
+      "id": "cccc",
+      "name": "HR Monitor"
+    }
+  ],
+  "messages": [
+    {
+      "patientId": "1111",
+      "actorId": "aaaa",
+      "content": {
+        "text": "Marie is feeling under the weather today.",
+        "imgUrl": "https://www.google.com/search?q=patient&espv=2&biw=1280&bih=699&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjcgIjoiKzQAhXsKcAKHYfUBOoQ_AUIBigB#imgrc=zjMXDR8HRAeDPM%3A"
+      }
+    },
+    {
+      "patientId": "1111",
+      "actorId": "bbbb",
+      "content": {
+        "text": "Just checked in. She's doing okay. Headed to the toxicologist to pick up her test results."
+      }
+    }
+  ]
+}
