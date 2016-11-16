@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F1CF8B1176C226CE566FECB00D4C09F0'
+               BlueprintIdentifier = 'E1966D750E0280E24CEA13029EFEAB7F'
                BlueprintName = 'Atlas-AtlasResource'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'AtlasResource.bundle'>
