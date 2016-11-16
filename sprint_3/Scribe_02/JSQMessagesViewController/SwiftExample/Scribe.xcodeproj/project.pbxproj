@@ -48,13 +48,13 @@
 		F80276D01CE38FA600063D88 /* DemoConversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoConversation.swift; sourceTree = "<group>"; };
 		F80276D21CE38FEB00063D88 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		F80276D41CE3915700063D88 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		F82D09BF1CDFBB4900DD74CF /* SwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F82D09BF1CDFBB4900DD74CF /* Scribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F82D09C21CDFBB4900DD74CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F82D09C71CDFBB4900DD74CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F82D09CC1CDFBB4900DD74CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F82D09CE1CDFBB4900DD74CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F82E19201CF0F2BE0069B211 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		F84895291CE0EE8800F5B654 /* SwiftExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F84895291CE0EE8800F5B654 /* ScribeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScribeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F848952D1CE0EE8800F5B654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,8 +112,8 @@
 		F82D09C01CDFBB4900DD74CF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F82D09BF1CDFBB4900DD74CF /* SwiftExample.app */,
-				F84895291CE0EE8800F5B654 /* SwiftExampleTests.xctest */,
+				F82D09BF1CDFBB4900DD74CF /* Scribe.app */,
+				F84895291CE0EE8800F5B654 /* ScribeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,9 +149,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F82D09BE1CDFBB4900DD74CF /* SwiftExample */ = {
+		F82D09BE1CDFBB4900DD74CF /* Scribe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F82D09D11CDFBB4900DD74CF /* Build configuration list for PBXNativeTarget "SwiftExample" */;
+			buildConfigurationList = F82D09D11CDFBB4900DD74CF /* Build configuration list for PBXNativeTarget "Scribe" */;
 			buildPhases = (
 				6F1D881EB82C4A076B2FDD24 /* [CP] Check Pods Manifest.lock */,
 				F82D09BB1CDFBB4900DD74CF /* Sources */,
@@ -164,14 +164,14 @@
 			);
 			dependencies = (
 			);
-			name = SwiftExample;
+			name = Scribe;
 			productName = SwiftExample;
-			productReference = F82D09BF1CDFBB4900DD74CF /* SwiftExample.app */;
+			productReference = F82D09BF1CDFBB4900DD74CF /* Scribe.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F84895281CE0EE8800F5B654 /* SwiftExampleTests */ = {
+		F84895281CE0EE8800F5B654 /* ScribeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F84895321CE0EE8800F5B654 /* Build configuration list for PBXNativeTarget "SwiftExampleTests" */;
+			buildConfigurationList = F84895321CE0EE8800F5B654 /* Build configuration list for PBXNativeTarget "ScribeTests" */;
 			buildPhases = (
 				87263242F5AF11CD38D2F990 /* [CP] Check Pods Manifest.lock */,
 				F84895251CE0EE8800F5B654 /* Sources */,
@@ -185,9 +185,9 @@
 			dependencies = (
 				F848952F1CE0EE8800F5B654 /* PBXTargetDependency */,
 			);
-			name = SwiftExampleTests;
+			name = ScribeTests;
 			productName = SwiftExampleTests;
-			productReference = F84895291CE0EE8800F5B654 /* SwiftExampleTests.xctest */;
+			productReference = F84895291CE0EE8800F5B654 /* ScribeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -211,7 +211,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F82D09BA1CDFBB4900DD74CF /* Build configuration list for PBXProject "SwiftExample" */;
+			buildConfigurationList = F82D09BA1CDFBB4900DD74CF /* Build configuration list for PBXProject "Scribe" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -224,8 +224,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F82D09BE1CDFBB4900DD74CF /* SwiftExample */,
-				F84895281CE0EE8800F5B654 /* SwiftExampleTests */,
+				F82D09BE1CDFBB4900DD74CF /* Scribe */,
+				F84895281CE0EE8800F5B654 /* ScribeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -372,7 +372,7 @@
 /* Begin PBXTargetDependency section */
 		F848952F1CE0EE8800F5B654 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F82D09BE1CDFBB4900DD74CF /* SwiftExample */;
+			target = F82D09BE1CDFBB4900DD74CF /* Scribe */;
 			targetProxy = F848952E1CE0EE8800F5B654 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -523,7 +523,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MacMeDan.SwiftExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftExample.app/SwiftExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scribe.app/Scribe";
 			};
 			name = Debug;
 		};
@@ -537,14 +537,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MacMeDan.SwiftExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftExample.app/SwiftExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scribe.app/Scribe";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F82D09BA1CDFBB4900DD74CF /* Build configuration list for PBXProject "SwiftExample" */ = {
+		F82D09BA1CDFBB4900DD74CF /* Build configuration list for PBXProject "Scribe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F82D09CF1CDFBB4900DD74CF /* Debug */,
@@ -553,7 +553,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F82D09D11CDFBB4900DD74CF /* Build configuration list for PBXNativeTarget "SwiftExample" */ = {
+		F82D09D11CDFBB4900DD74CF /* Build configuration list for PBXNativeTarget "Scribe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F82D09D21CDFBB4900DD74CF /* Debug */,
@@ -562,7 +562,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F84895321CE0EE8800F5B654 /* Build configuration list for PBXNativeTarget "SwiftExampleTests" */ = {
+		F84895321CE0EE8800F5B654 /* Build configuration list for PBXNativeTarget "ScribeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F84895301CE0EE8800F5B654 /* Debug */,

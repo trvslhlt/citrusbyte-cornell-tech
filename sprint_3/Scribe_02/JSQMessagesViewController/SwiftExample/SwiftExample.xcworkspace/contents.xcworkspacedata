@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SwiftExample.xcodeproj">
+      location = "group:/Users/trvslhlt/Documents/CornellTech/ProductStudio/citrusbyte-cornell-tech/sprint_3/Scribe_02/JSQMessagesViewController/SwiftExample/Scribe.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
